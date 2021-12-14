@@ -1,0 +1,21 @@
+.main {
+  background-image: url("https://i.pinimg.com/originals/ff/9b/72/ff9b7218c815dae3d2d1912b54b2c0af.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
+  font-family: "Harry Potter", sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-size: 8em;
+  color: gold;
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 2px;
+}
+.button {
+  top: 100px;
+}
