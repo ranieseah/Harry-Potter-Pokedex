@@ -1,2 +1,3 @@
 # Harry-Potter-Pokedex
-list of Harry Potter Characters
+
+GitHub Pages: https://ranieseah.github.io/Harry-Potter-Pokedex
