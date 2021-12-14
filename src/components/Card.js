@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./characters.module.css";
 
 const Card = (props) => {
   let imageURL = "";
@@ -32,13 +33,35 @@ const Card = (props) => {
   } else if (props.info.species.includes("elf")) {
     imageURL =
       "https://cdn4.iconfinder.com/data/icons/harry-potter/100/final_collection-14-512.png";
+  } else if (props.info.species === "goblin") {
+    imageURL =
+      "https://bbts1.azureedge.net/images/p/full/2018/06/ec12877e-f722-4db6-a439-12ac8997bc3e.jpg";
+  } else if (props.info.species === "owl") {
+    imageURL =
+      "https://pm1.narvii.com/6014/baeafb4e67fb42dedc84ff26124843fb24aca1a5_hq.jpg";
+  } else if (props.info.species === "three-headed dog") {
+    imageURL =
+      "https://monsterlegacy.files.wordpress.com/2017/01/fluffyasleep.jpg";
+  } else if (props.info.species === "centaur") {
+    imageURL =
+      "https://i.pinimg.com/originals/1a/e1/c1/1ae1c18aa008271a8a6836c4d9c18239.jpg";
+  } else if (props.info.species === "dragon") {
+    imageURL = "https://pbs.twimg.com/media/Da0cH3TWAAALraj.jpg";
+  } else if (props.info.species === "acromantula") {
+    imageURL =
+      "https://www.hp-lexicon.org/wp-content/uploads/2017/03/acromantula.jpg";
+  } else {
+    imageURL =
+      "https://i.pinimg.com/originals/c8/5a/75/c85a753da37f1ac98f41a94027109170.jpg";
   }
   return (
-    <div className="card" style={{ width: "18rem" }}>
+    <div className={("card", styles.card)} style={{ width: "18rem" }}>
       <img src={imageURL} height="200px" />
       <div className="card-body">
-        <h5 className="card-title">{props.info.name}</h5>
-        <button className="btn btn-primary">Go somewhere</button>
+        <h5 className="card-title" style={{ backgroundColor: "white" }}>
+          {props.info.name}
+        </h5>
+        <button className="btn btn-light">View Details..</button>
       </div>
     </div>
   );

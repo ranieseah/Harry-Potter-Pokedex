@@ -1,14 +1,30 @@
 div {
   max-height: 100%;
+  /* margin: 5px 0 15px 0; */
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
+  /* border: 2px solid red; */
 }
+/* .filterBar,
+.card {
+  margin: 5px 0 15px 0;
+  padding: 20px; 
+} */
+
+th,
+td {
+  text-align: left;
+  padding: 2px 0 2px 20px;
+}
+
 .background {
   background-image: url("https://st2.depositphotos.com/5288588/9155/v/600/depositphotos_91552376-stock-illustration-different-witch-equipment-seamless-pattern.jpg");
   background-repeat: repeat;
   background-size: 300px;
   background-attachment: fixed;
 }
+
 img {
   object-fit: contain;
 }

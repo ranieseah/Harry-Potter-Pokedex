@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./characters.module.css";
 
 const FilterBar = (props) => {
   const handleFilter = (element) => {
@@ -37,7 +38,7 @@ const FilterBar = (props) => {
     // }
   };
   return (
-    <div>
+    <div className={styles.filterBar}>
       <table
         style={{
           backgroundColor: "white",

@@ -121,8 +121,6 @@ const ShowCharacters = () => {
       setChecked(newDead);
     }
   };
-
-  console.log("special check:", checked.hogwartsStudent.indexOf(false));
   const checkFilter = (char) => {
     return (
       checked.house.indexOf(char.house) >= 0 &&
@@ -132,15 +130,13 @@ const ShowCharacters = () => {
       checked.alive.indexOf(char.alive) >= 0
     );
   };
-  console.log(checked);
+
   updateClick();
   const printList = charCtx.characters.filter(checkFilter);
-
   let listChar = [];
   for (let i = 0; i < printList.length; i++) {
     listChar.push(<Card info={printList[i]} />);
   }
-  console.log(listChar);
 
   return (
     <div className={styles.background}>
