@@ -68,7 +68,6 @@ const CardDetails = (props) => {
   }
 
   let altNames = "";
-  console.log("alt names:", props.info.alternate_names);
   if (props.info.alternate_names == "") {
     altNames = "Has no fancy names.";
   } else {

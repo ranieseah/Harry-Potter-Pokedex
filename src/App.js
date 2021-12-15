@@ -18,8 +18,6 @@ function App() {
     fetchData(url);
   }, []);
 
-  console.log(characters[1]);
-
   return (
     <>
       <Route exact path="/">

@@ -4,38 +4,6 @@ import styles from "./characters.module.css";
 const FilterBar = (props) => {
   const handleFilter = (element) => {
     props.function(element.target.value);
-    // switch (element.target.value) {
-    //   case "Gryffindor":
-    //     console.log("flip gryffindor");
-    //     break;
-    //   case "Hufflepuff":
-    //     console.log("flip hufflepuff");
-    //     break;
-    //   case "Slytherin":
-    //     console.log("flip slytherin");
-    //     break;
-    //   case "Ravenclaw":
-    //     console.log("flip ravenclaw");
-    //     break;
-    //   case "Male":
-    //     console.log("flip male");
-    //     break;
-    //   case "Female":
-    //     console.log("flip female");
-    //     break;
-    //   case "Student":
-    //     console.log("flip student");
-    //     break;
-    //   case "Staff":
-    //     console.log("flip staff");
-    //     break;
-    //   case "Alive":
-    //     console.log("flip alive");
-    //     break;
-    //   case "Dead":
-    //     console.log("flip dead");
-    //     break;
-    // }
   };
   return (
     <div className={styles.filterBar}>

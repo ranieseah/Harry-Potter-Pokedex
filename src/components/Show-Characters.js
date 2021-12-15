@@ -28,15 +28,12 @@ const ShowCharacters = () => {
     ) {
       const currentIndex = checked.house.indexOf(click);
       const newHouse = checked;
-      console.log("currentIndex:", currentIndex);
-      console.log("newHouse:", newHouse);
       if (currentIndex === -1) {
         newHouse.house.push(click);
       } else {
         newHouse.house.splice(currentIndex, 1);
       }
       setClick();
-      console.log("to setChecked:", newHouse);
       setChecked(newHouse);
     }
     if (click === "male" || click === "female") {
@@ -137,11 +134,6 @@ const ShowCharacters = () => {
   const openPopup = () => {
     setModalShow(true);
   };
-
-  // const closePopup = (event) => {
-  //   event.preventDefault();
-  //   setPopup(false);
-  // };
 
   const printList = charCtx.characters.filter(checkFilter);
   let listChar = [];
