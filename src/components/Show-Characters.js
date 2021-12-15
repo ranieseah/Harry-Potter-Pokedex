@@ -3,6 +3,7 @@ import styles from "./characters.module.css";
 import Card from "./Card";
 import charContext from "./context/character-context";
 import FilterBar from "./Filter-Bar";
+import CardDetails from "./Card-Details";
 
 const ShowCharacters = () => {
   const charCtx = useContext(charContext);
@@ -14,6 +15,8 @@ const ShowCharacters = () => {
     hogwartsStaff: [true, false],
     alive: [true, false],
   });
+  const [modalShow, setModalShow] = useState(false);
+  const [modalContent, setModalContent] = useState();
 
   const updateClick = () => {
     if (
@@ -131,21 +134,47 @@ const ShowCharacters = () => {
     );
   };
 
-  updateClick();
+  const openPopup = () => {
+    setModalShow(true);
+  };
+
+  // const closePopup = (event) => {
+  //   event.preventDefault();
+  //   setPopup(false);
+  // };
+
   const printList = charCtx.characters.filter(checkFilter);
   let listChar = [];
   for (let i = 0; i < printList.length; i++) {
-    listChar.push(<Card info={printList[i]} />);
+    listChar.push(
+      <Card
+        info={printList[i]}
+        function={openPopup}
+        setModalContent={setModalContent}
+      />
+    );
   }
 
+  updateClick();
+
   return (
-    <div className={styles.background}>
-      <FilterBar function={setClick} />
-      <div className="container">
-        <div className="row">Results: {printList.length}</div>
-        <div className="row">{listChar}</div>
+    <>
+      {modalShow && (
+        <CardDetails
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+          info={modalContent}
+        />
+      )}
+      <div className={styles.background}>
+        <FilterBar function={setClick} />
+        <div className="container">
+          <div className="row">Results: {printList.length}</div>
+          {listChar.length > 0 && <div className="row">{listChar}</div>}
+          {listChar.length === 0}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

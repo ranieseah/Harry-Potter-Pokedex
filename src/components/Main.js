@@ -1,16 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./main.module.css";
+import { Row, Container, Button } from "react-bootstrap";
 
 const Main = () => {
   return (
     <>
-      <div className={styles.main}>
-        <h1> Harry Potter Pokedex</h1>
-        <Link to="/all-char">
-          <button className="btn btn-outline-warning">lets go!</button>
-        </Link>
-      </div>
+      <Container bsPrefix={styles.main}>
+        <Row>
+          <h1> Harry Potter Pokedex</h1>
+
+          <Link to="/all-char">
+            <Button variant="outline-warning">Let's Go!</Button>
+          </Link>
+        </Row>
+      </Container>
     </>
   );
 };

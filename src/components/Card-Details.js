@@ -1,8 +1,7 @@
 import React from "react";
-import styles from "./characters.module.css";
-import { Image } from "react-bootstrap";
+import { Modal, Button, Image } from "react-bootstrap";
 
-const Card = (props) => {
+const CardDetails = (props) => {
   let imageURL = "";
   if (props.info.image.length > 0) {
     imageURL = props.info.image;
@@ -58,25 +57,115 @@ const Card = (props) => {
       "https://rlv.zcache.com.au/cartoon_harry_potter_and_buckbeak_poster-r2acb236c261a40db8781874171b63d0b_wvk_8byvr_540.jpg";
   }
 
-  const handleClick = (event) => {
-    event.preventDefault();
-    props.function();
-    props.setModalContent(props.info);
-  };
+  let wordSpecies;
+  if (props.info.wizard === true) {
+    wordSpecies = "Wizard";
+  } else {
+    const species = props.info.species.split("");
+    species.unshift(species[0].toUpperCase());
+    species.splice(1, 1);
+    wordSpecies = species.join("");
+  }
+
+  let altNames = "";
+  console.log("alt names:", props.info.alternate_names);
+  if (props.info.alternate_names == "") {
+    altNames = "Has no fancy names.";
+  } else {
+    for (let i = 0; i < props.info.alternate_names.length; i++)
+      if (i == props.info.alternate_names.length - 1) {
+        altNames = altNames + props.info.alternate_names[i] + ".";
+      } else {
+        altNames = altNames + props.info.alternate_names[i] + ", ";
+      }
+  }
+
+  let house = "";
+  if (props.info.house.length > 1) {
+    house = props.info.house;
+  } else {
+    house = "Didnt get sorted into a House";
+  }
+
+  let dob = "";
+  if (props.info.dateOfBirth.length > 1) {
+    dob = props.info.dateOfBirth;
+  } else {
+    dob = "Oops! Its a secret....";
+  }
+
+  let age;
+  age = 2021 - props.info.yearOfBirth;
+  if (age === 2021) {
+    age = "Ageless";
+  }
+
+  let ancestry;
+  if (props.info.ancestry.length > 1) {
+    ancestry = props.info.ancestry;
+  } else {
+    const mystery = [
+      "Picked up from Rubbish Bin",
+      "Popped out of a Rock",
+      "Blessed by God",
+      "Dropped off a beanstalk",
+      "Came from Narnia",
+      "Dragon's Descent",
+    ];
+    ancestry = mystery[Math.floor(Math.random() * 6)];
+  }
+
+  let eyeColour;
+  if (props.info.eyeColour.length > 1) {
+    eyeColour = props.info.eyeColour;
+  } else eyeColour = "Rainbow-Coloured";
+
+  let actorGender;
+  if (props.info.gender === "male") {
+    actorGender = "Actor";
+  } else actorGender = "Actress";
+
+  let actor;
+  if (props.info.actor.length > 1) {
+    actor = props.info.actor.length;
+  } else actor = "Cameo by Ditto";
 
   return (
-    <div className={("card", styles.card)} style={{ width: "18rem" }}>
-      <Image src={imageURL} height="200px" roundedCircle />
-      <div className="card-body">
-        <h5 className="card-title" style={{ backgroundColor: "white" }}>
-          {props.info.name}
-        </h5>
-        <button className="btn btn-light" onClick={handleClick}>
-          View Details..
-        </button>
-      </div>
-    </div>
+    <>
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header closeButton>
+          <Modal.Title id="contained-modal-title-vcenter">
+            {props.info.name}
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Image src={imageURL} height="150px" roundedCircle />
+          <h4>{wordSpecies} Statistics</h4>
+          <p>
+            Alternate Names: {altNames}
+            <br />
+            Gender: {props.info.gender}
+            <br /> House: {house}
+            <br />
+            DOB: {dob}
+            <br />
+            Age: {age}
+            <br /> Ancestry: {ancestry}
+            <br /> Eye Colour: {eyeColour}
+            <br /> {actorGender}: {actor}
+          </p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button onClick={props.onHide}>Close</Button>
+        </Modal.Footer>
+      </Modal>
+    </>
   );
 };
 
-export default Card;
+export default CardDetails;
