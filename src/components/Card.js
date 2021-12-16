@@ -83,10 +83,10 @@ const Card = (props) => {
         <br />
         <Button
           variant="light"
-          onClick={handleClick}
+          onClick={handleSelect}
           bsPrefix={styles.buttonselect}
         >
-          View Details..
+          Select Character
         </Button>
       </div>
     </div>
