@@ -25,7 +25,7 @@ function App() {
       </Route>
       <Route path="/all-char">
         <charContext.Provider value={{ characters }}>
-          <ShowCharacters char={characters[0]} />
+          <ShowCharacters />
         </charContext.Provider>
       </Route>
     </>
