@@ -1,5 +1,5 @@
 # Harry-Potter-Pokedex
-SEI33 Project 2 (React.js)
+SEI33 Project 2 (React.js, React-Bootstrap v2.0.3)
 
 Project not deployed. 
 
@@ -9,7 +9,7 @@ Project not deployed.
 - Overlay
 
 # What isnt working
-1) deployment with a static(https://harrypotter-pokedex.netlify.app/).
+1) deployment with a static server(https://harrypotter-pokedex.netlify.app/).
 2) tried to overlay a frame over the images, but couldn't get it to work.
 
 # What is working
@@ -160,7 +160,8 @@ const checkFilter = (char) => {
 - installed Bootstrap for React, and Bootstrap took care of it
 
 # What could be done better
-Looking to complete stretched goals of using Redux Toolkit to add functionality of being able to pick characters and proceed into another view that runs a comparison on all the information present in the API across the selected characters.
+- Styling of the app was partly done via CSS module, partly done by assigning style to the components in JSX, partly done via Bootstrap, and partly done by using bsPrefix to assign a class from the CSS module. Should stick with one method for cleaner codes.
+- Looking to complete stretched goals of using Redux Toolkit to add functionality of being able to pick characters and proceed into another view that runs a comparison on all the information present in the API across the selected characters.
 
 # Credits
 API used: https://hp-api.herokuapp.com/
