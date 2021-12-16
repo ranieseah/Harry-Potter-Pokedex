@@ -72,7 +72,7 @@ const CardDetails = (props) => {
     altNames = "Has no fancy names.";
   } else {
     for (let i = 0; i < props.info.alternate_names.length; i++)
-      if (i == props.info.alternate_names.length - 1) {
+      if (i === props.info.alternate_names.length - 1) {
         altNames = altNames + props.info.alternate_names[i] + ".";
       } else {
         altNames = altNames + props.info.alternate_names[i] + ", ";
@@ -126,7 +126,7 @@ const CardDetails = (props) => {
 
   let actor;
   if (props.info.actor.length > 1) {
-    actor = props.info.actor.length;
+    actor = props.info.actor;
   } else actor = "Cameo by Ditto";
 
   return (

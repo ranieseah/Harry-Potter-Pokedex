@@ -4,6 +4,7 @@ import Card from "./Card";
 import charContext from "./context/character-context";
 import FilterBar from "./Filter-Bar";
 import CardDetails from "./Card-Details";
+import { Container, Row } from "react-bootstrap";
 
 const ShowCharacters = () => {
   const charCtx = useContext(charContext);
@@ -160,11 +161,11 @@ const ShowCharacters = () => {
       )}
       <div className={styles.background}>
         <FilterBar function={setClick} />
-        <div className="container">
-          <div className="row">Results: {printList.length}</div>
+        <Container>
+          <Row>Results: {printList.length}</Row>
           {listChar.length > 0 && <div className="row">{listChar}</div>}
           {listChar.length === 0}
-        </div>
+        </Container>
       </div>
     </>
   );

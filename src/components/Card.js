@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./characters.module.css";
-import { Image } from "react-bootstrap";
+import { Image, Button } from "react-bootstrap";
 
 const Card = (props) => {
   let imageURL = "";
@@ -66,14 +66,28 @@ const Card = (props) => {
 
   return (
     <div className={("card", styles.card)} style={{ width: "18rem" }}>
-      <Image src={imageURL} height="200px" roundedCircle />
+      <Image
+        src={imageURL}
+        height="200px"
+        roundedCircle
+        onClick={handleClick}
+      />
       <div className="card-body">
-        <h5 className="card-title" style={{ backgroundColor: "white" }}>
+        <Button
+          variant="light"
+          onClick={handleClick}
+          bsPrefix={styles.buttonname}
+        >
           {props.info.name}
-        </h5>
-        <button className="btn btn-light" onClick={handleClick}>
+        </Button>
+        <br />
+        <Button
+          variant="light"
+          onClick={handleClick}
+          bsPrefix={styles.buttonselect}
+        >
           View Details..
-        </button>
+        </Button>
       </div>
     </div>
   );
