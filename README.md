@@ -143,7 +143,7 @@ const checkFilter = (char) => {
   };
   ```
   - filter the information from the API, then generate the Card components for each character that passes the filter
-  ```
+ ```
   const printList = charCtx.characters.filter(checkFilter);
   let listChar = [];
   for (let i = 0; i < printList.length; i++) {
