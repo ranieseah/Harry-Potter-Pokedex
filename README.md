@@ -154,7 +154,7 @@ const checkFilter = (char) => {
         setModalContent={setModalContent}
       />
     );
-    ```
+  ```
 ### Modal
 - was originally struggling with getting the Modal Window to appear
 - installed Bootstrap for React, and Bootstrap took care of it
