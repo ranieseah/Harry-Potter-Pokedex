@@ -23,7 +23,7 @@ const [checked, setChecked] = useState({
     hogwartsStaff: [true, false],
     alive: [true, false],
   });
-  ```
+```
 - setting the state based on the user input
 ```
 const updateClick = () => {
