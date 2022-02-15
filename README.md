@@ -1,5 +1,5 @@
 # Harry-Potter-Pokedex
-Coding Project (React.js, React-Bootstrap v2.0.3)
+Coding Project (React.js, React-Bootstrap v5.1.3)
 
 Deployed on Github Pages: https://ranieseah.github.io/Harry-Potter-Pokedex/
 
