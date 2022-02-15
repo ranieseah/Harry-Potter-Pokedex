@@ -1,7 +1,7 @@
 # Harry-Potter-Pokedex
-SEI33 Project 2 (React.js, React-Bootstrap v2.0.3)
+Coding Project (React.js, React-Bootstrap v2.0.3)
 
-Project not deployed. 
+Deployed on Github Pages: https://ranieseah.github.io/Harry-Potter-Pokedex/
 
 # The App
 - create an App using React.js
