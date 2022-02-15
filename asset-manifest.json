@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Harry-Potter-Pokedex/static/css/main.9f66aede.chunk.css",
-    "main.js": "/Harry-Potter-Pokedex/static/js/main.87fd99ea.chunk.js",
-    "main.js.map": "/Harry-Potter-Pokedex/static/js/main.87fd99ea.chunk.js.map",
+    "main.js": "/Harry-Potter-Pokedex/static/js/main.2eb5e80c.chunk.js",
+    "main.js.map": "/Harry-Potter-Pokedex/static/js/main.2eb5e80c.chunk.js.map",
     "runtime-main.js": "/Harry-Potter-Pokedex/static/js/runtime-main.f43df075.js",
     "runtime-main.js.map": "/Harry-Potter-Pokedex/static/js/runtime-main.f43df075.js.map",
     "static/js/2.ae5f80ce.chunk.js": "/Harry-Potter-Pokedex/static/js/2.ae5f80ce.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.f43df075.js",
     "static/js/2.ae5f80ce.chunk.js",
     "static/css/main.9f66aede.chunk.css",
-    "static/js/main.87fd99ea.chunk.js"
+    "static/js/main.2eb5e80c.chunk.js"
   ]
 }
