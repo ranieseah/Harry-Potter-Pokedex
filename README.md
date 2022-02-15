@@ -8,10 +8,6 @@ Deployed on Github Pages: https://ranieseah.github.io/Harry-Potter-Pokedex/
 - App generates cards based on the information from API and filtered based on user input on the filters
 - Overlay
 
-# What isnt working
-1) deployment with a static server(https://harrypotter-pokedex.netlify.app/).
-2) tried to overlay a frame over the images, but couldn't get it to work.
-
 # What is working
 ### filtering of characters
 - capturing the filter options in a state
@@ -159,9 +155,12 @@ const checkFilter = (char) => {
 - was originally struggling with getting the Modal Window to appear
 - installed Bootstrap for React, and Bootstrap took care of it
 
+# What isnt working
+- tried to overlay a frame over the images, but couldn't get it to work.
+- stretch goals to 'favourite' certain characters and create another view to compare the stats of favourited characters.
+
 # What could be done better
 - Styling of the app was partly done via CSS module, partly done by assigning style to the components in JSX, partly done via Bootstrap, and partly done by using bsPrefix to assign a class from the CSS module. Should stick with one method for cleaner codes.
-- Looking to complete stretched goals of using Redux Toolkit to add functionality of being able to pick characters and proceed into another view that runs a comparison on all the information present in the API across the selected characters.
 
 # Credits
 API used: https://hp-api.herokuapp.com/
