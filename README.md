@@ -6,7 +6,6 @@ Deployed on Github Pages: https://ranieseah.github.io/Harry-Potter-Pokedex/
 # The App
 - create an App using React.js
 - App generates cards based on the information from API and filtered based on user input on the filters
-- Overlay
 
 # What is working
 ### filtering of characters
