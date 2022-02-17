@@ -154,6 +154,13 @@ const checkFilter = (char) => {
 - was originally struggling with getting the Modal Window to appear
 - installed Bootstrap for React, and Bootstrap took care of it
 
+### Deployment
+- after deployment, custom Harry Potter font used on landing page and API call couldnt run because they are called over an unsecured path(http), while the app is deployed on a secured path(https). 
+- Include this line of code in <head> section of index.html
+```
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+```
+
 # What isnt working
 - tried to overlay a frame over the images, but couldn't get it to work.
 - stretch goals to 'favourite' certain characters and create another view to compare the stats of favourited characters.
